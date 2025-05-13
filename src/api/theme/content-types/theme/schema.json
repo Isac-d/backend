@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "themes",
+  "info": {
+    "singularName": "theme",
+    "pluralName": "themes",
+    "displayName": "Theme"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Theme": {
+      "type": "enumeration",
+      "enum": [
+        "Default",
+        "Light",
+        "Circus"
+      ]
+    }
+  }
+}

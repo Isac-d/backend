@@ -19,13 +19,16 @@
     },
     "book": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::book.book"
+      "relation": "manyToOne",
+      "target": "api::book.book",
+      "inversedBy": "reviews"
     },
     "user": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "reviews"
+
     }
   }
 }
