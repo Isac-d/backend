@@ -4,7 +4,8 @@
   "info": {
     "singularName": "theme",
     "pluralName": "themes",
-    "displayName": "Theme"
+    "displayName": "Theme",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,8 +15,8 @@
       "type": "enumeration",
       "enum": [
         "Default",
-        "Light",
-        "Circus"
+        "Christmas",
+        "Easter"
       ]
     }
   }

@@ -440,6 +440,7 @@ export interface ApiReviewReview extends Struct.CollectionTypeSchema {
 export interface ApiThemeTheme extends Struct.SingleTypeSchema {
   collectionName: 'themes';
   info: {
+    description: '';
     displayName: 'Theme';
     pluralName: 'themes';
     singularName: 'theme';
@@ -455,7 +456,7 @@ export interface ApiThemeTheme extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::theme.theme'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Theme: Schema.Attribute.Enumeration<['Default', 'Light', 'Circus']>;
+    Theme: Schema.Attribute.Enumeration<['Default', 'Christmas', 'Easter']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -943,13 +944,13 @@ export interface PluginUsersPermissionsUser
       }>;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    readList: Schema.Attribute.Relation<'oneToMany', 'api::book.book'>;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
     reviews: Schema.Attribute.Relation<'oneToMany', 'api::review.review'>;
     role: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    savedbooks: Schema.Attribute.Relation<'oneToMany', 'api::book.book'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

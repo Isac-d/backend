@@ -70,9 +70,8 @@
       "relation": "oneToMany",
       "target": "api::review.review",
       "mappedBy": "user"
-
     },
-    "readList": {
+    "savedbooks": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::book.book"
